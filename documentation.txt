@@ -1,0 +1,155 @@
+---
+
+### IDT Project Summary
+
+**Core Purpose:**
+
+The IDT is a groundbreaking invention aimed at forging the future of programming.
+
+It introduces a revolutionary 3D environment for programming concepts, transitioning from the 2D terminal to a multi-dimensional space where:
+
+- Binary (1s and 0s) can be bent, shaped, and rotated.
+- Programming becomes a fully immersive and interactive experience.
+
+**Target Audience:**
+
+- Anyone with an interest in code.
+- **Prerequisites:**
+  - Knowledge of Python.
+  - Willingness to learn "9Lang," the proprietary language for IDT.
+
+**Goals and Problems Solved:**
+
+The IDT resolves the limitations of traditional 2D terminal interfaces by transitioning into the 3D realm.
+
+- Unlocks a new dimension in programming, enabling unprecedented levels of:
+  - Visualization.
+  - Collaboration.
+  - Interaction.
+
+**Key Features:**
+
+- **Immersive VR/AR Interaction:** Walk through and interact with code structures in 3D space.
+- **Real-Time Collaboration:** Multi-user sessions with synchronized views and shared debugging.
+- **AI-Assisted Debugging:** Navigate, identify, and resolve issues efficiently with AI support.
+- **3D Visualization of Code and Data:** Transform complex code and data structures into dynamic 3D models.
+- **Dynamic Debugging:** Trace and interact with live execution flows in a 3D environment.
+
+**Vision Statement:**
+
+"The Interdimensional Terminal is a transformative platform that unlocks the potential of programming in a 3D space, redefining how humans interact with code, data, and debugging, and forging the next frontier of technological innovation."
+
+---
+
+### 9Lang Syntax
+
+**Core Syntax:**
+
+- `//` Comments
+- `||` Vertical stacks
+- `< >` Bend, zip, and unzip
+- `$` Commands to navigate layers of the world
+- `€` Portal setup with 3D coordinates (e.g., `€portal loc loc`)
+- `L` Split stacks
+- `U` Toggle field of view between 2D and 3D
+- `€U` Save and quit
+- `exit` Exit without saving
+- `@` Rotate anything, including the world
+- `#` Climb anything
+- `%` Delete anything
+- `~~` Traverse data
+- `__` Flatten or move anything along an `n xyz` line
+- `==` Scale up or down
+- `$ip % loc` Remove files from a location
+- `$ip <&> loc` Download and install files
+- `disconnect` Disconnect from cubes
+- `Ctrl + Middle Mouse` Pan around
+- `Scroll` Zoom in/out
+- `Space` Jump
+- `E` Activate stacks or objects
+
+---
+
+### Use Cases
+
+```plaintext
+// Set the file location
+ip = "https://example.com/file.zip"
+loc = "0, 1, 0"
+
+// Download and place the file in the 3D environment
+$ip -> loc
+
+// Validate the file placement
+8 validate $ip -> loc
+
+// Define multiple file sources
+ip1 = "https://example.com/file1.zip"
+ip2 = "https://example.com/file2.zip"
+ip3 = "https://example.com/file3.zip"
+loc = "2, 3, 4"
+
+// Download multiple files and place them in the location
+$ip1, ip2, ip3 -> loc
+
+// Define the file location and operation
+ip = "https://example.com/resource"
+loc = "5, 6, 7"
+
+// Download and unpack the file
+$ip <> loc
+
+// Compress the file with high efficiency and send it back
+$ip <> loc high
+
+// Test network connection
+ip = "192.168.1.10"
+$test ip
+
+// Tether to the remote system
+tether cube 192.168.1.10
+
+// Synchronize with the remote system
+sync cube 192.168.1.10
+
+// Undo a file placement
+8 undo $ip -> loc
+
+// Redo the last undone operation
+8 redo $ip -> loc
+
+// Remove a file
+$ip % loc
+
+// Download and install
+$ip <&> loc
+
+// Disconnect from a cube
+disconnect cube 192.168.1.10
+
+// Rotate a stack by 45 degrees
+@rotate stack1 45
+
+// Scale a stack by 2
+stack1 == 2
+```
+
+---
+
+### Tools and Setup
+
+**Tools:**
+
+- **Unity**: For environment creation.
+- **Python**: For backend logic and 9Lang interpreter development.
+- **Git**: For version control and collaboration.
+
+**Dependencies:**
+
+- Python libraries: `requests`, `socket`.
+- Unity: Ensure input handling is configured for extended controls.
+
+**Security Considerations:**
+
+- Validate IP addresses for networking.
+- Use connection timeouts to prevent hangs.
